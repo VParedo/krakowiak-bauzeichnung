@@ -16,18 +16,44 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+html {
+  scroll-behavior: smooth !important;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .clip-path-hero {
+    clip-path: polygon(0 0, 100% 0, 100% 10%, 0 50%);
   }
+}
+
+.my_section {
+  @apply flex flex-col w-full justify-center items-center py-20 px-6 md:px-0;
+}
+
+.my_container {
+  @apply flex flex-col w-full max-w-my_max_width gap-my_gap;
+}
+
+.my_hero_title {
+  @apply text-4xl sm:text-6xl font-semibold;
+}
+
+.my_h1 {
+  @apply text-2xl sm:text-4xl font-semibold;
+}
+
+.my_h2 {
+  @apply text-lg font-semibold;
+}
+
+.my_p {
+  @apply text-lg font-normal;
+}
+
+.my_initial_pt {
+  @apply pt-20;
+}
+
+.input {
+  @apply border-black border p-1 rounded focus:outline-1 focus:opacity-60;
 }
