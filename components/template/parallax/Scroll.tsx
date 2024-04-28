@@ -13,8 +13,6 @@ const Scroll = () => {
   });
   const scale = useTransform(scrollYProgress, [0, 1], [1, 4]);
 
-  useEffect(() => console.log(scrollYProgress.current), [scrollYProgress]);
-
   return (
     <>
       <div className="h-screen"></div>
